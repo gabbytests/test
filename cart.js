@@ -9,9 +9,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartTotal = document.getElementById("cart-total");
     const checkoutBtn = document.getElementById("checkout-btn");
 
+    // Create floating notification element
+    const cartNotification = document.createElement("div");
+    cartNotification.id = "cart-notification";
+    cartNotification.style.cssText = `
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: #0071e3;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+    `;
+    document.body.appendChild(cartNotification);
+
+    function showNotification(message) {
+        cartNotification.textContent = message;
+        cartNotification.style.display = "block";
+        cartNotification.style.opacity = "1";
+        cartNotification.style.transform = "translateY(0)";
+
+        setTimeout(() => {
+            cartNotification.style.opacity = "0";
+            cartNotification.style.transform = "translateY(-10px)";
+            setTimeout(() => {
+                cartNotification.style.display = "none";
+            }, 300);
+        }, 1500);
+    }
+
     function updateCartCount() {
         const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
         cartCount.textContent = itemCount;
+
+        // Cart bounce animation
+        cartIcon.classList.add("cart-bounce");
+        setTimeout(() => {
+            cartIcon.classList.remove("cart-bounce");
+        }, 500);
     }
 
     function updateCartDisplay() {
@@ -41,36 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
         cartTotal.textContent = `Total: GH₵${total.toFixed(2)}`;
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartCount();
-
-        document.querySelectorAll(".increase-quantity").forEach(button => {
-            button.addEventListener("click", (e) => {
-                const idx = e.target.getAttribute("data-index");
-                cart[idx].quantity++;
-                updateCartDisplay();
-            });
-        });
-
-        document.querySelectorAll(".decrease-quantity").forEach(button => {
-            button.addEventListener("click", (e) => {
-                const idx = e.target.getAttribute("data-index");
-                if (cart[idx].quantity > 1) {
-                    cart[idx].quantity--;
-                } else {
-                    cart.splice(idx, 1);
-                }
-                updateCartDisplay();
-            });
-        });
     }
 
-    // Fix: Ensure "Add to Cart" grabs the correct image
     document.querySelectorAll(".add-to-cart").forEach((button) => {
         button.addEventListener("click", (e) => {
             const btn = e.currentTarget;
             const name = btn.getAttribute("data-name");
             const price = parseFloat(btn.getAttribute("data-price"));
-
-            // Find the closest product container that holds the image
             const productContainer = btn.closest(".product");
             const image = productContainer ? productContainer.querySelector("img").src : "";
 
@@ -82,15 +100,25 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 cart.push({ name, price, quantity: 1, image });
             }
+
             updateCartDisplay();
+            showNotification(`${name} added to cart`);
         });
     });
 
-    cartIcon.addEventListener("click", () => {
+    cartIcon.addEventListener("click", (event) => {
+        event.stopPropagation();
         cartSidebar.classList.add("cart-visible");
     });
 
-    closeCartBtn.addEventListener("click", () => {
+    document.addEventListener("click", (event) => {
+        if (!cartSidebar.contains(event.target) && event.target !== cartIcon) {
+            cartSidebar.classList.remove("cart-visible");
+        }
+    });
+
+    closeCartBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
         cartSidebar.classList.remove("cart-visible");
     });
 
