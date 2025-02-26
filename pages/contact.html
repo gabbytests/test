@@ -715,15 +715,7 @@ for (var attr in meta) {
   class="utility-bar color-scheme-1 gradient utility-bar--bottom-border"
   
 >
-  <div class="page-width utility-bar__grid"><div
-        class="announcement-bar"
-        role="region"
-        aria-label="Announcement"
-        
-      ><p class="announcement-bar__message h5">
-            <span>Welcome to our store</span></p></div><div class="localization-wrapper">
-</div>
-  </div>
+  
 </div>
 
 
@@ -796,7 +788,8 @@ for (var attr in meta) {
       padding-top: 20px;
       padding-bottom: 20px;
     }
-  }</style><script src="../cdn/shop/t/1/assets/cart-notification.js@v=133508293167896966491736814350" defer="defer"></script><sticky-header data-sticky-type="on-scroll-up" class="header-wrapper color-scheme-1 gradient header-wrapper--border-bottom"><header class="header header--top-center header--mobile-center page-width header--has-menu header--has-account">
+  }</style><script src="../cdn/shop/t/1/assets/cart-notification.js@v=133508293167896966491736814350" defer="defer"></script><sticky-header data-sticky-type="on-scroll-up" class="header-wrapper color-scheme-1 gradient header-wrapper--border-bottom">
+    <header class="header header--top-center header--mobile-center page-width header--has-menu header--has-account">
 
 <header-drawer data-breakpoint="tablet">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -820,13 +813,6 @@ for (var attr in meta) {
                     >
                       Home
                     </a></li><li><a
-                      id="HeaderDrawer-catalog"
-                      href="../collections/all.html"
-                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
-                      
-                    >
-                      Catalog
-                    </a></li><li><a
                       id="HeaderDrawer-contact"
                       href="contact.html"
                       class="menu-drawer__menu-item list-menu__item link link--text focus-inset menu-drawer__menu-item--active"
@@ -837,14 +823,7 @@ for (var attr in meta) {
                       Contact
                     </a></li></ul>
           </nav>
-          <div class="menu-drawer__utility-links"><a
-                href="https://shopify.com/59549712518/account?locale=en&region_country=GH"
-                class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide"
-                rel="nofollow"
-              ><account-icon><span class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-account" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M6 4.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8m5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15M9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35" clip-rule="evenodd"/></svg>
-</span></account-icon>Log in</a><div class="menu-drawer__localization header-localization">
-</div><ul class="list list-social list-unstyled" role="list"></ul>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -852,82 +831,7 @@ for (var attr in meta) {
 </header-drawer>
 
 
-<details-modal class="header__search">
-  <details>
-    <summary
-      class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
-      aria-haspopup="dialog"
-      aria-label="Search"
-    >
-      <span>
-        <span class="svg-wrapper"><svg fill="none" class="icon icon-search" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z" clip-rule="evenodd"/></svg>
-</span>
-        <span class="svg-wrapper header__icon-close"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-close" viewBox="0 0 18 17"><path fill="currentColor" d="M.865 15.978a.5.5 0 0 0 .707.707l7.433-7.431 7.579 7.282a.501.501 0 0 0 .846-.37.5.5 0 0 0-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 1 0-.707-.708L8.991 7.853 1.413.573a.5.5 0 1 0-.693.72l7.563 7.268z"/></svg>
-</span>
-      </span>
-    </summary>
-    <div
-      class="search-modal modal__content gradient"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Search"
-    >
-      <div class="modal-overlay"></div>
-      <div
-        class="search-modal__content search-modal__content-bottom"
-        tabindex="-1"
-      ><predictive-search class="search-modal__form" data-loading-text="Loading..."><form action="https://havo.racour.store/search" method="get" role="search" class="search search-modal__form">
-          <div class="field">
-            <input
-              class="search__input field__input"
-              id="Search-In-Modal-1"
-              type="search"
-              name="q"
-              value=""
-              placeholder="Search"role="combobox"
-                aria-expanded="false"
-                aria-owns="predictive-search-results"
-                aria-controls="predictive-search-results"
-                aria-haspopup="listbox"
-                aria-autocomplete="list"
-                autocorrect="off"
-                autocomplete="off"
-                autocapitalize="off"
-                spellcheck="false">
-            <label class="field__label" for="Search-In-Modal-1">Search</label>
-            <input type="hidden" name="options[prefix]" value="last">
-            <button
-              type="reset"
-              class="reset__button field__button hidden"
-              aria-label="Clear search term"
-            >
-              <span class="svg-wrapper"><svg fill="none" stroke="currentColor" class="icon icon-close" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" stroke-opacity=".2"/><path stroke-linecap="round" stroke-linejoin="round" d="M11.83 11.83 6.172 6.17M6.229 11.885l5.544-5.77"/></svg>
-</span>
-            </button>
-            <button class="search__button field__button" aria-label="Search">
-              <span class="svg-wrapper"><svg fill="none" class="icon icon-search" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z" clip-rule="evenodd"/></svg>
-</span>
-            </button>
-          </div><div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
 
-<div class="predictive-search__loading-state">
-  <svg xmlns="http://www.w3.org/2000/svg" class="spinner" viewBox="0 0 66 66"><circle stroke-width="6" cx="33" cy="33" r="30" fill="none" class="path"/></svg>
-
-</div>
-</div>
-
-            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span></form></predictive-search><button
-          type="button"
-          class="search-modal__close-button modal__close-button link link--text focus-inset"
-          aria-label="Close"
-        >
-          <span class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-close" viewBox="0 0 18 17"><path fill="currentColor" d="M.865 15.978a.5.5 0 0 0 .707.707l7.433-7.431 7.579 7.282a.501.501 0 0 0 .846-.37.5.5 0 0 0-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 1 0-.707-.708L8.991 7.853 1.413.573a.5.5 0 1 0-.693.72l7.563 7.268z"/></svg>
-</span>
-        </button>
-      </div>
-    </div>
-  </details>
-</details-modal>
 <a href="../index.html" class="header__heading-link link link--text focus-inset"><div class="header__heading-logo-wrapper">
                 
                 <img src="../cdn/shop/files/logo-black.png@v=1736821350&amp;width=600" alt="Havo" srcset="../cdn/shop/files/logo-black.png@v=1736821350&amp;width=90h=90 9../cdn/shop/files/logo-black.png@v=1736821350&amp;width=135idth=13../cdn/shop/files/logo-black.png@v=1736821350&amp;width=180mp;width=180 180w" width="90" height="35.4375" loading="eager" class="header__heading-logo motion-reduce" sizes="(max-width: 180px) 50vw, 90px">
@@ -943,14 +847,6 @@ for (var attr in meta) {
             <span
             >Home</span>
           </a></li><li><a
-            id="HeaderMenu-catalog"
-            href="../collections/all.html"
-            class="header__menu-item list-menu__item link link--text focus-inset"
-            
-          >
-            <span
-            >Catalog</span>
-          </a></li><li><a
             id="HeaderMenu-contact"
             href="contact.html"
             class="header__menu-item list-menu__item link link--text focus-inset"
@@ -965,101 +861,7 @@ for (var attr in meta) {
           </a></li></ul>
 </nav>
 
-<div class="header__icons header__icons--localization header-localization">
-      <div class="desktop-localization-wrapper">
-</div>
-      
 
-<details-modal class="header__search">
-  <details>
-    <summary
-      class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
-      aria-haspopup="dialog"
-      aria-label="Search"
-    >
-      <span>
-        <span class="svg-wrapper"><svg fill="none" class="icon icon-search" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z" clip-rule="evenodd"/></svg>
-</span>
-        <span class="svg-wrapper header__icon-close"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-close" viewBox="0 0 18 17"><path fill="currentColor" d="M.865 15.978a.5.5 0 0 0 .707.707l7.433-7.431 7.579 7.282a.501.501 0 0 0 .846-.37.5.5 0 0 0-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 1 0-.707-.708L8.991 7.853 1.413.573a.5.5 0 1 0-.693.72l7.563 7.268z"/></svg>
-</span>
-      </span>
-    </summary>
-    <div
-      class="search-modal modal__content gradient"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Search"
-    >
-      <div class="modal-overlay"></div>
-      <div
-        class="search-modal__content search-modal__content-bottom"
-        tabindex="-1"
-      ><predictive-search class="search-modal__form" data-loading-text="Loading..."><form action="https://havo.racour.store/search" method="get" role="search" class="search search-modal__form">
-          <div class="field">
-            <input
-              class="search__input field__input"
-              id="Search-In-Modal"
-              type="search"
-              name="q"
-              value=""
-              placeholder="Search"role="combobox"
-                aria-expanded="false"
-                aria-owns="predictive-search-results"
-                aria-controls="predictive-search-results"
-                aria-haspopup="listbox"
-                aria-autocomplete="list"
-                autocorrect="off"
-                autocomplete="off"
-                autocapitalize="off"
-                spellcheck="false">
-            <label class="field__label" for="Search-In-Modal">Search</label>
-            <input type="hidden" name="options[prefix]" value="last">
-            <button
-              type="reset"
-              class="reset__button field__button hidden"
-              aria-label="Clear search term"
-            >
-              <span class="svg-wrapper"><svg fill="none" stroke="currentColor" class="icon icon-close" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" stroke-opacity=".2"/><path stroke-linecap="round" stroke-linejoin="round" d="M11.83 11.83 6.172 6.17M6.229 11.885l5.544-5.77"/></svg>
-</span>
-            </button>
-            <button class="search__button field__button" aria-label="Search">
-              <span class="svg-wrapper"><svg fill="none" class="icon icon-search" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z" clip-rule="evenodd"/></svg>
-</span>
-            </button>
-          </div><div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-
-<div class="predictive-search__loading-state">
-  <svg xmlns="http://www.w3.org/2000/svg" class="spinner" viewBox="0 0 66 66"><circle stroke-width="6" cx="33" cy="33" r="30" fill="none" class="path"/></svg>
-
-</div>
-</div>
-
-            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span></form></predictive-search><button
-          type="button"
-          class="search-modal__close-button modal__close-button link link--text focus-inset"
-          aria-label="Close"
-        >
-          <span class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-close" viewBox="0 0 18 17"><path fill="currentColor" d="M.865 15.978a.5.5 0 0 0 .707.707l7.433-7.431 7.579 7.282a.501.501 0 0 0 .846-.37.5.5 0 0 0-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 1 0-.707-.708L8.991 7.853 1.413.573a.5.5 0 1 0-.693.72l7.563 7.268z"/></svg>
-</span>
-        </button>
-      </div>
-    </div>
-  </details>
-</details-modal>
-
-<a
-          href="https://shopify.com/59549712518/account?locale=en&region_country=GH"
-          class="header__icon header__icon--account link focus-inset small-hide"
-          rel="nofollow"
-        ><account-icon><span class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-account" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M6 4.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8m5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15M9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35" clip-rule="evenodd"/></svg>
-</span></account-icon><span class="visually-hidden">Log in</span>
-        </a><a href="https://havo.racour.store/cart" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-          
-            <span class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-cart-empty" viewBox="0 0 40 40"><path fill="currentColor" fill-rule="evenodd" d="M15.75 11.8h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33L28.4 11.8zm0 1h-2.22l-.71 10.67a4 4 0 0 0 3.99 4.27h7.38a4 4 0 0 0 4-4.27l-.72-10.67h-2.22v.63a4.75 4.75 0 1 1-9.5 0zm8.5 0h-7.5v.63a3.75 3.75 0 1 0 7.5 0z"/></svg>
-</span>
-          
-        <span class="visually-hidden">Cart</span></a>
-    </div>
   </header>
 </sticky-header>
 
@@ -1264,7 +1066,7 @@ Item added to your cart
           
             data-cascade
           
-        ><div class="footer-block__newsletter"><h2 class="footer-block__heading inline-richtext">Subscribe to our emails</h2><form method="post" action="https://havo.racour.store/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="contact[tags]" value="newsletter">
+        ><div class="footer-block__newsletter"><h2 class="footer-block__heading inline-richtext">Subscribe to our newsletter</h2><form method="post" action="https://havo.racour.store/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
                     <input
@@ -1314,7 +1116,7 @@ Item added to your cart
           >&copy; 2025, <a href="../index.html" title="">Havo</a></small>
         <small class="copyright__content"><a target="_blank" rel="nofollow" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore"> </a></small><ul class="policies list-unstyled"><li>
                   <small class="copyright__content"
-                    ><a href="https://havo.racour.store/policies/privacy-policy">Privacy policy</a></small
+                    ><a>Privacy policy</a></small
                   >
                 </li></ul></div>
     </div>
