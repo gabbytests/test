@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Racour Store</title>
+  <link rel="stylesheet" href="cdn/shop/t/1/assets/base.css">
+  <style>
+    /* Minimal checkout page styling */
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .checkout-container { max-width: 600px; margin: auto; }
+    .cart-item { border-bottom: 1px solid #ccc; padding: 10px 0; }
+    .cart-total { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+    <div id="checkout-items"></div>
+    <p id="checkout-total" class="cart-total">Total: GH₵0.00</p>
+    <button id="place-order">Place Order</button>
+  </div>
+
+  <script>
+    // When the page loads, get the cart items from localStorage and display them
+    document.addEventListener("DOMContentLoaded", () => {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const checkoutItems = document.getElementById("checkout-items");
+      const checkoutTotal = document.getElementById("checkout-total");
+
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+        const itemDiv = document.createElement("div");
+        itemDiv.classList.add("cart-item");
+        itemDiv.innerHTML = `<p>${item.name} - GH₵${item.price} x ${item.quantity}</p>`;
+        checkoutItems.appendChild(itemDiv);
+      });
+      checkoutTotal.textContent = `Total: GH₵${total.toFixed(2)}`;
+
+      document.getElementById("place-order").addEventListener("click", () => {
+        alert("Order placed! Thank you for your purchase.");
+        localStorage.removeItem("cart");
+        window.location.href = "index.html";
+      });
+    });
+  </script>
+</body>
+</html>
