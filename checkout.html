@@ -6,44 +6,300 @@
   <title>Checkout - Racour Store</title>
   <link rel="stylesheet" href="cdn/shop/t/1/assets/base.css">
   <style>
-    /* Minimal checkout page styling */
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    .checkout-container { max-width: 600px; margin: auto; }
-    .cart-item { border-bottom: 1px solid #ccc; padding: 10px 0; }
-    .cart-total { font-weight: bold; margin-top: 20px; }
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100vw;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+    .checkout-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .checkout-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .order-container, .billing-container, .payment-container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .back-to-cart {
+      margin-bottom: 10px;
+    }
+
+    .back-to-cart a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #0071e3;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .back-to-cart a:hover {
+      color: #005bb5;
+    }
+
+    h1, h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      background: #f9f9f9;
+      transition: 0.3s ease-in-out;
+    }
+
+    input:focus {
+      border-color: #0071e3;
+      outline: none;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 113, 227, 0.2);
+    }
+
+    .cart-items-wrapper {
+      margin-top: 10px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      padding: 8px;
+      background: #f5f5f7;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+
+    .cart-total {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    #place-order {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      background: #0071e3;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease, transform 0.2s ease-in-out;
+    }
+
+    #place-order:hover {
+      background: #005bb5;
+      transform: scale(1.02);
+    }
+
+    /* Bank Logos */
+    .bank-logos {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .bank-logos img {
+      width: 50px;
+      height: auto;
+    }
+
+    /* DESKTOP LAYOUT */
+    @media (min-width: 768px) {
+      .checkout-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .left-section {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .payment-container {
+        flex: 1;
+      }
+    }
+
+    /* MOBILE LAYOUT: STACKED */
+    @media (max-width: 768px) {
+      body {
+        display: block;
+        padding: 0;
+      }
+      .checkout-wrapper {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+        gap: 15px;
+      }
+      .checkout-content {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="checkout-container">
-    <h1>Checkout</h1>
-    <div id="checkout-items"></div>
-    <p id="checkout-total" class="cart-total">Total: GH₵0.00</p>
-    <button id="place-order">Place Order</button>
+  <div class="checkout-wrapper">
+
+    <!-- BACK TO CART LINK -->
+    <div class="back-to-cart">
+      <a href="index.html">← Back to Cart</a>
+    </div>
+
+    <div class="checkout-content">
+      <!-- LEFT SECTION (Order Summary + Billing) -->
+      <div class="left-section">
+        <!-- Order Summary -->
+        <div class="order-container">
+          <h2>Order Summary</h2>
+          <div id="checkout-items"></div>
+          <p id="checkout-total" class="cart-total">Total: GH₵0.00</p>
+        </div>
+
+        <!-- Billing (Separated but Below Order Summary) -->
+        <div class="billing-container">
+          <h1>Billing Details</h1>
+          <form id="billing-form">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" required>
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" required>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- PAYMENT ON RIGHT -->
+      <div class="payment-container">
+        <h2>Payment Method</h2>
+        <div class="bank-logos">
+          <img src="visa.png" alt="Visa">
+          <img src="mastercard.png" alt="Mastercard">
+          <img src="amex.png" alt="American Express">
+          <img src="paypal.png" alt="PayPal">
+        </div>
+
+        <form id="payment-form">
+          <div class="form-group">
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" id="card-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9101 1121" required maxlength="19">
+          </div>
+          <div class="form-group">
+            <label for="expiry">Expiration Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY" required maxlength="5">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required maxlength="3">
+          </div>
+          <button id="place-order">Place Order</button>
+        </form>
+      </div>
+    </div>
   </div>
-
-  <script>
-    // When the page loads, get the cart items from localStorage and display them
-    document.addEventListener("DOMContentLoaded", () => {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const checkoutItems = document.getElementById("checkout-items");
-      const checkoutTotal = document.getElementById("checkout-total");
-
-      let total = 0;
-      cart.forEach(item => {
-        total += item.price * item.quantity;
-        const itemDiv = document.createElement("div");
-        itemDiv.classList.add("cart-item");
-        itemDiv.innerHTML = `<p>${item.name} - GH₵${item.price} x ${item.quantity}</p>`;
-        checkoutItems.appendChild(itemDiv);
-      });
-      checkoutTotal.textContent = `Total: GH₵${total.toFixed(2)}`;
-
-      document.getElementById("place-order").addEventListener("click", () => {
-        alert("Order placed! Thank you for your purchase.");
-        localStorage.removeItem("cart");
-        window.location.href = "index.html";
-      });
-    });
-  </script>
 </body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const checkoutItems = document.getElementById("checkout-items");
+    const checkoutTotal = document.getElementById("checkout-total");
+    let total = 0;
+
+    // Clear previous items before adding
+    checkoutItems.innerHTML = "";
+
+    cart.forEach(item => {
+      total += item.price * item.quantity;
+
+      const itemDiv = document.createElement("div");
+      itemDiv.classList.add("cart-item");
+      itemDiv.innerHTML = `
+        <span>${item.name} x${item.quantity}</span>
+        <span>GH₵${(item.price * item.quantity).toFixed(2)}</span>
+      `;
+      checkoutItems.appendChild(itemDiv);
+    });
+
+    checkoutTotal.textContent = `Total: GH₵${total.toFixed(2)}`;
+
+    document.getElementById("place-order").addEventListener("click", () => {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+
+      alert("Order placed successfully!");
+      localStorage.removeItem("cart");
+      window.location.href = "order-confirmation.html";
+    });
+  });
+</script>
+
 </html>

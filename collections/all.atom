@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://havo.racour.store/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://havo.racour.store/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://havo.racour.store/collections/all.atom"/>
+  <title>Havo</title>
+  <updated>2025-01-15T01:05:04+00:00</updated>
+  <author>
+    <name>Havo</name>
+  </author>
+  <entry>
+    <id>https://havo.racour.store/products/7320573051014</id>
+    <published>2025-01-15T01:05:04+00:00</published>
+    <updated>2025-01-15T01:05:04+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/goth-dress"/>
+    <title>Goth Dress</title>
+    <s:type></s:type>
+    <s:vendor>Havo</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0595/4971/2518/files/IMG-6309.jpg?v=1736903107"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Havo<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            5.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320573051014</id>
+      <title>Default Title</title>
+      <s:price currency="GHS">5.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://havo.racour.store/products/7320401150086</id>
+    <published>2025-01-14T16:33:32+00:00</published>
+    <updated>2025-01-14T16:33:32+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/12-carat-diamond-necklace"/>
+    <title>12-Carat Diamond Necklace</title>
+    <s:type>Necklace</s:type>
+    <s:vendor>Acme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0595/4971/2518/files/photo_5_2025-01-14_14-25-42_cdc4bb57-8609-406b-befe-d91f615963cc.jpg?v=1736872370"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Acme<br>
+        <strong>Type: </strong>Necklace<br>
+        <strong>Price: </strong>
+            899.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320401150086</id>
+      <title>Default Title</title>
+      <s:price currency="GHS">899.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>8000</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://havo.racour.store/products/7320398856326</id>
+    <published>2025-01-14T16:21:07+00:00</published>
+    <updated>2025-01-14T16:21:07+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/chic-boots"/>
+    <title>Chic Boots</title>
+    <s:type>Shoes</s:type>
+    <s:vendor>Acme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0595/4971/2518/files/photo_2_2025-01-14_16-13-33_c54574ca-8841-4126-882d-6b6a44d271e6.jpg?v=1736871615"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Acme<br>
+        <strong>Type: </strong>Shoes<br>
+        <strong>Price: </strong>
+            299.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320398856326</id>
+      <title>Default Title</title>
+      <s:price currency="GHS">299.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>5000</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://havo.racour.store/products/7320398200966</id>
+    <published>2025-01-14T16:16:36+00:00</published>
+    <updated>2025-01-14T16:16:36+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/grey-hoodie"/>
+    <title>Grey Hoodie</title>
+    <s:type>Shirts</s:type>
+    <s:vendor>Acme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0595/4971/2518/files/photo_1_2025-01-14_16-13-33.jpg?v=1736871273"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Acme<br>
+        <strong>Type: </strong>Shirts<br>
+        <strong>Price: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320398200966</id>
+      <title>Default Title</title>
+      <s:price currency="GHS">139.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>2000</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://havo.racour.store/products/7320357077126</id>
+    <published>2025-01-14T15:58:30+00:00</published>
+    <updated>2025-01-14T15:58:30+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/example-pants"/>
+    <title>Exotic Bag</title>
+    <s:type>Bags</s:type>
+    <s:vendor>Acme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0595/4971/2518/files/photo_3_2025-01-14_16-13-33.jpg?v=1736872089"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Acme<br>
+        <strong>Type: </strong>Bags<br>
+        <strong>Price: </strong>
+            49.99
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Step into style and comfort with our exotic bags. Made from premium, breathable fabric, these pants are designed to move with you—whether you're lounging at home, running errands, or heading to the office.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320357077126</id>
+      <title>Bag</title>
+      <s:price currency="GHS">49.99</s:price>
+      <s:sku/>
+      <s:grams>1250</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320357077126</id>
+      <title>W32H34</title>
+      <s:price currency="GHS">49.99</s:price>
+      <s:sku/>
+      <s:grams>1250</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://havo.racour.store/products/7320357208198</id>
+    <published>2025-01-14T15:57:44+00:00</published>
+    <updated>2025-01-14T15:57:44+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/example-hat"/>
+    <title>Stylish Everyday Glasses</title>
+    <s:type>Glasses</s:type>
+    <s:vendor>Acme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0595/4971/2518/files/photo_3_2025-01-14_14-25-42_7ccc0b5e-1297-4e82-8caa-ff047d807ca0.jpg?v=1736872251"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Acme<br>
+        <strong>Type: </strong>Glasses<br>
+        <strong>Price: </strong>
+            17.99
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Top off your look with our glasses, where style meets practicality. Designed with premium materials, this hat offers a comfortable fit and durability for all-day wear.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320357208198</id>
+      <title>Grey</title>
+      <s:price currency="GHS">17.99</s:price>
+      <s:sku/>
+      <s:grams>275</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320357208198</id>
+      <title>Stylish Everyday Glasses</title>
+      <s:price currency="GHS">17.99</s:price>
+      <s:sku></s:sku>
+      <s:grams>275</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://havo.racour.store/products/7320356913286</id>
+    <published>2025-01-14T15:38:38+00:00</published>
+    <updated>2025-01-14T15:38:38+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/example-t-shirt"/>
+    <title>Classic Everyday Dress</title>
+    <s:type>Shirts</s:type>
+    <s:vendor>Acme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0595/4971/2518/files/photo_1_2025-01-14_13-20-50_438122db-2a52-4efe-b9ba-d8dc33132041.jpg?v=1736871804"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Acme<br>
+        <strong>Type: </strong>Shirts<br>
+        <strong>Price: </strong>
+            19.99 - 25.00
+            <a href="https://havo.racour.store/products/example-t-shirt">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Elevate your casual style with our dress, the ultimate blend of comfort and simplicity. Crafted from soft, breathable fabric, this tee is perfect for all-day wear—whether you’re relaxing, working, or out and about.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>mens t-shirt example</s:tag>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320356913286</id>
+      <title>Lithograph - Height: 9&quot; x Width: 12&quot;</title>
+      <s:price currency="GHS">25.00</s:price>
+      <s:sku/>
+      <s:grams>3629</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320356913286</id>
+      <title>Small</title>
+      <s:price currency="GHS">19.99</s:price>
+      <s:sku>example-shirt-s</s:sku>
+      <s:grams>200</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://havo.racour.store/products/7320356913286</id>
+      <title>Medium</title>
+      <s:price currency="GHS">19.99</s:price>
+      <s:sku>example-shirt-m</s:sku>
+      <s:grams>200</s:grams>
+    </s:variant>
+  </entry>
+</feed>

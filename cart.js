@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Retrieve or initialize the cart array from localStorage
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // DOM Elements
     const cartIcon = document.getElementById("cart-icon");
     const cartCount = document.getElementById("cart-count");
     const cartSidebar = document.getElementById("cart-sidebar");
@@ -11,13 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartTotal = document.getElementById("cart-total");
     const checkoutBtn = document.getElementById("checkout-btn");
 
-    // Update the cart count in the icon
     function updateCartCount() {
         const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
         cartCount.textContent = itemCount;
     }
 
-    // Update the cart sidebar display
     function updateCartDisplay() {
         cartItemsContainer.innerHTML = "";
         let total = 0;
@@ -25,9 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
         cart.forEach((item, index) => {
             total += item.price * item.quantity;
             cartItemsContainer.innerHTML += `
-                <div class="cart-item">
-                    <p>${item.name} - GH₵${item.price} x ${item.quantity}</p>
-                    <button class="remove-item" data-index="${index}">Remove</button>
+                <div class="cart-item" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; border-bottom: 1px solid #e0e0e0;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 10px; object-fit: cover;">
+                        <div class="cart-item-info">
+                            <p class="cart-item-name" style="margin: 0; font-weight: 600; font-size: 14px; color: #333;">${item.name}</p>
+                            <p class="cart-item-price" style="margin: 0; font-size: 12px; color: #666;">GH₵${item.price}</p>
+                        </div>
+                    </div>
+                    <div class="cart-item-quantity" style="display: flex; align-items: center; gap: 6px; background: #f5f5f5; padding: 4px 10px; border-radius: 10px;">
+                        <button class="decrease-quantity" data-index="${index}" style="width: 22px; height: 22px; border-radius: 50%; background: #ddd; border: none; font-size: 12px; cursor: pointer;">-</button>
+                        <span style="font-weight: bold; font-size: 14px;">${item.quantity}</span>
+                        <button class="increase-quantity" data-index="${index}" style="width: 22px; height: 22px; border-radius: 50%; background: #ddd; border: none; font-size: 12px; cursor: pointer;">+</button>
+                    </div>
                 </div>
             `;
         });
@@ -36,51 +42,61 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartCount();
 
-        // Attach event listeners for remove buttons
-        document.querySelectorAll(".remove-item").forEach((button) => {
+        document.querySelectorAll(".increase-quantity").forEach(button => {
             button.addEventListener("click", (e) => {
                 const idx = e.target.getAttribute("data-index");
-                cart.splice(idx, 1);
+                cart[idx].quantity++;
+                updateCartDisplay();
+            });
+        });
+
+        document.querySelectorAll(".decrease-quantity").forEach(button => {
+            button.addEventListener("click", (e) => {
+                const idx = e.target.getAttribute("data-index");
+                if (cart[idx].quantity > 1) {
+                    cart[idx].quantity--;
+                } else {
+                    cart.splice(idx, 1);
+                }
                 updateCartDisplay();
             });
         });
     }
 
-    // Attach click events to "Add to Cart" buttons
+    // Fix: Ensure "Add to Cart" grabs the correct image
     document.querySelectorAll(".add-to-cart").forEach((button) => {
         button.addEventListener("click", (e) => {
-            // Use currentTarget in case the click occurred on a child element
             const btn = e.currentTarget;
             const name = btn.getAttribute("data-name");
             const price = parseFloat(btn.getAttribute("data-price"));
+
+            // Find the closest product container that holds the image
+            const productContainer = btn.closest(".product");
+            const image = productContainer ? productContainer.querySelector("img").src : "";
+
             if (!name || isNaN(price)) return;
 
             const existing = cart.find(item => item.name === name);
             if (existing) {
                 existing.quantity++;
             } else {
-                cart.push({ name, price, quantity: 1 });
+                cart.push({ name, price, quantity: 1, image });
             }
             updateCartDisplay();
         });
     });
 
-    // Open cart sidebar when cart icon is clicked
     cartIcon.addEventListener("click", () => {
         cartSidebar.classList.add("cart-visible");
     });
 
-    // Close cart sidebar when close button is clicked
     closeCartBtn.addEventListener("click", () => {
         cartSidebar.classList.remove("cart-visible");
     });
 
-    // Checkout button event (adjust as needed)
     checkoutBtn.addEventListener("click", () => {
-        alert("Proceeding to checkout...");
         window.location.href = "checkout.html";
     });
 
-    // Initial display update
     updateCartDisplay();
 });
