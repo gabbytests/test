@@ -1,0 +1,142 @@
+
+<div
+        class="card__inner color-scheme-2 gradient ratio"
+        style="--ratio-percent: 100.0%;"
+      ><div class="card__media">
+            <div class="media media--transparent media--hover-effect">
+              
+              <img
+               src="img/pd7.jpg"
+                sizes="(min-width: 1200px) 267px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="product7"
+                class="motion-reduce"
+                
+                  loading="eager"
+                
+                width="699"
+                height="699"
+              >
+              
+</div>
+          </div><div class="card__content">
+          <div class="card__information">
+            <h3
+              class="card__heading"
+              
+            >
+              <span
+                id="StandardCardNoMediaLink-template--16088786534534__featured_collection-7320401150086"
+                class="full-unstyled-link"
+                aria-labelledby="StandardCardNoMediaLink-template--16088786534534__featured_collection-7320401150086 NoMediaStandardBadge-template--16088786534534__featured_collection-7320401150086"
+              >
+                product7
+              </span>
+            </h3>
+          </div>
+          <div class="card__badge bottom left"></div>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3
+            class="card__heading h5"
+            
+              id="title-template--16088786534534__featured_collection-7320401150086"
+            
+          >
+            <span
+              id="CardLink-template--16088786534534__featured_collection-7320401150086"
+              class="full-unstyled-link"
+              aria-labelledby="CardLink-template--16088786534534__featured_collection-7320401150086 Badge-template--16088786534534__featured_collection-7320401150086"
+            >
+              product7
+            </span>
+          </h3>
+          <div class="card-information"><span class="caption-large light"></span>
+<div
+    class="
+      price "
+  >
+    <div class="price__container"><div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
+          <span class="price-item price-item--regular">
+            $899.00
+          </span></div>
+      <div class="price__sale">
+          <span class="visually-hidden visually-hidden--inline">Regular price</span>
+          <span>
+            <s class="price-item price-item--regular">
+              
+                
+              
+            </s>
+          </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
+        <span class="price-item price-item--sale price-item--last">
+          $899.00
+        </span>
+      </div>
+      <small class="unit-price caption hidden">
+        <span class="visually-hidden">Unit price</span>
+        <span class="price-item price-item--last">
+          <span></span>
+          <span aria-hidden="true">/</span>
+          <span class="visually-hidden">&nbsp;per&nbsp;</span>
+          <span>
+          </span>
+        </span>
+      </small>
+    </div></div>
+
+
+</div>
+        </div>
+        
+        
+          <div class="quick-add no-js-hidden"><product-form data-section-id="template--16088786534534__featured_collection">
+            <button
+            id="quick-add-template--16088786534534__featured_collection7320401150086-submit"
+            type="submit"
+            name="add"
+            class="add-to-cart quick-add__submit button button--full-width button--secondary"
+            aria-haspopup="dialog"
+            aria-labelledby="quick-add-template--16088786534534__featured_collection7320401150086-submit title-template--16088786534534__featured_collection-7320401150086"
+            aria-live="polite"
+            data-sold-out-message="true"
+            data-name="product7"
+            data-price="899.00"
+            data-image="https://gabbytests.github.io/test/img/pd7.jpg" 
+                    >
+            <span>Add to cart</span>
+            <span class="sold-out-message hidden">Sold out</span>
+            <div class="loading__spinner hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="spinner" viewBox="0 0 66 66">
+                    <circle stroke-width="6" cx="33" cy="33" r="30" fill="none" class="path"/>
+                </svg>
+            </div>
+        </button><input type="hidden" name="product-id" value="7320401150086" /><input type="hidden" name="section-id" value="template--16088786534534__featured_collection" /></form></product-form></div>
+        
+        <div class="card__badge bottom left"></div>
+      </div>
+    </div>
+  </div>
+          </li><li
+            id="Slide-template--16088786534534__featured_collection-2"
+            class="grid__item scroll-trigger animate--slide-in"
+            
+              data-cascade
+              style="--animation-order: 2;"
+            
+          >
+            
+<div class="card-wrapper product-card-wrapper underline-links-hover">
+    <div
+      class="
+        card card--standard
+         card--media
+        
+        
+        
+        
+        
+      "
+      style="--ratio-percent: 100.0%;"
+    >
