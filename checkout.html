@@ -143,12 +143,13 @@
     /* Bank Logos */
     .bank-logos {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       margin-bottom: 15px;
+      align-items: center;
     }
 
     .bank-logos img {
-      width: 50px;
+      width: 270px;
       height: auto;
     }
 
@@ -235,10 +236,8 @@
       <div class="payment-container">
         <h2>Payment Method</h2>
         <div class="bank-logos">
-          <img src="visa.png" alt="Visa">
-          <img src="mastercard.png" alt="Mastercard">
-          <img src="amex.png" alt="American Express">
-          <img src="paypal.png" alt="PayPal">
+          <img src="cc/ca-removebg-preview.png" alt="Visa">
+          
         </div>
 
         <form id="payment-form">
@@ -267,39 +266,152 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const cardName = document.getElementById("card-name");
+    const cardNumber = document.getElementById("card-number");
+    const expiry = document.getElementById("expiry");
+    const cvv = document.getElementById("cvv");
+    const placeOrderButton = document.getElementById("place-order");
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const checkoutItems = document.getElementById("checkout-items");
     const checkoutTotal = document.getElementById("checkout-total");
     let total = 0;
 
-    // Clear previous items before adding
+    // Populate Checkout Items
     checkoutItems.innerHTML = "";
-
     cart.forEach(item => {
-      total += item.price * item.quantity;
-
-      const itemDiv = document.createElement("div");
-      itemDiv.classList.add("cart-item");
-      itemDiv.innerHTML = `
-        <span>${item.name} x${item.quantity}</span>
-        <span>GH₵${(item.price * item.quantity).toFixed(2)}</span>
-      `;
-      checkoutItems.appendChild(itemDiv);
+        total += item.price * item.quantity;
+        const itemDiv = document.createElement("div");
+        itemDiv.classList.add("cart-item");
+        itemDiv.innerHTML = `
+            <span>${item.name} x${item.quantity}</span>
+            <span>GH₵${(item.price * item.quantity).toFixed(2)}</span>
+        `;
+        checkoutItems.appendChild(itemDiv);
     });
-
     checkoutTotal.textContent = `Total: GH₵${total.toFixed(2)}`;
 
-    document.getElementById("place-order").addEventListener("click", () => {
-      if (cart.length === 0) {
-        alert("Your cart is empty!");
-        return;
-      }
+    // Function to show warning inside input boxes
+    function showWarning(input, message) {
+        input.style.border = "2px solid red";
+        input.style.backgroundColor = "#ffe6e6";
+        input.setCustomValidity(message);
+    }
 
-      alert("Order placed successfully!");
-      localStorage.removeItem("cart");
-      window.location.href = "order-confirmation.html";
+    function clearWarning(input) {
+        input.style.border = "";
+        input.style.backgroundColor = "";
+        input.setCustomValidity("");
+    }
+
+    // Cardholder Name: Only Letters & Spaces
+    cardName.addEventListener("input", (e) => {
+        e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+        clearWarning(e.target);
     });
-  });
+
+    // Card Number Formatting (Only Numbers + Auto Space Every 4 Digits)
+    cardNumber.addEventListener("input", (e) => {
+        let value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+        value = value.replace(/(.{4})/g, "$1 ").trim(); // Add space every 4 digits
+        e.target.value = value.substring(0, 19); // Limit length
+        clearWarning(e.target);
+    });
+
+    // Expiration Date Formatting & Validation (MM/YY)
+    expiry.addEventListener("input", (e) => {
+        let value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+        let currentYear = new Date().getFullYear().toString().slice(-2); // Get last two digits of current year
+        let currentMonth = new Date().getMonth() + 1; // Get current month
+
+        if (value.length >= 2) {
+            let month = parseInt(value.substring(0, 2));
+
+            if (month > 12) {
+                month = 12; // Cap at 12 for months
+            }
+            value = `${month.toString().padStart(2, "0")}/${value.substring(2, 4)}`;
+        }
+
+        e.target.value = value.substring(0, 5); // Limit length
+
+        // Validate Expiry Date
+        if (value.length === 5) {
+            let [mm, yy] = value.split("/");
+            let enteredYear = parseInt(yy);
+            let enteredMonth = parseInt(mm);
+
+            if (enteredYear < parseInt(currentYear)) {
+                showWarning(expiry, "Expiration year cannot be in the past.");
+            } else if (enteredYear === parseInt(currentYear) && enteredMonth < currentMonth) {
+                showWarning(expiry, "Expiration month cannot be in the past.");
+            } else {
+                clearWarning(expiry);
+            }
+        }
+    });
+
+    // CVV Formatting (Only Numbers)
+    cvv.addEventListener("input", (e) => {
+        e.target.value = e.target.value.replace(/\D/g, "").substring(0, 3); // Only numbers, max 3 digits
+        clearWarning(e.target);
+    });
+
+    // Place Order Button Click
+    placeOrderButton.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let hasError = false;
+        let currentYear = new Date().getFullYear().toString().slice(-2);
+        let currentMonth = new Date().getMonth() + 1;
+
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
+
+        if (cardName.value.trim() === "") {
+            showWarning(cardName, "Cardholder Name cannot be empty.");
+            hasError = true;
+        }
+
+        if (cardNumber.value.replace(/\s/g, "").length !== 16) {
+            showWarning(cardNumber, "Invalid Card Number. Must be 16 digits.");
+            hasError = true;
+        }
+
+        if (!expiry.value.match(/^(0[1-9]|1[0-2])\/[0-9]{2}$/)) {
+            showWarning(expiry, "Invalid Expiration Date. Use MM/YY format.");
+            hasError = true;
+        } else {
+            let [mm, yy] = expiry.value.split("/");
+            let enteredYear = parseInt(yy);
+            let enteredMonth = parseInt(mm);
+
+            if (enteredYear < parseInt(currentYear)) {
+                showWarning(expiry, "Expiration year cannot be in the past.");
+                hasError = true;
+            } else if (enteredYear === parseInt(currentYear) && enteredMonth < currentMonth) {
+                showWarning(expiry, "Expiration month cannot be in the past.");
+                hasError = true;
+            } else {
+                clearWarning(expiry);
+            }
+        }
+
+        if (cvv.value.length !== 3) {
+            showWarning(cvv, "Invalid CVV. Must be 3 digits.");
+            hasError = true;
+        }
+
+        if (hasError) return; // Stop if there's an error
+
+        // ✅ Successful Payment, No Popup, Directly Redirects
+        localStorage.removeItem("cart");
+        window.location.href = "order-confirmation.html";
+    });
+});
+
 </script>
 
 </html>

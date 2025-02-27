@@ -9,9 +9,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartTotal = document.getElementById("cart-total");
     const checkoutBtn = document.getElementById("checkout-btn");
 
+    // Create floating notification element
+    const cartNotification = document.createElement("div");
+    cartNotification.id = "cart-notification";
+    cartNotification.style.cssText = `
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: #0071e3;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+    `;
+    document.body.appendChild(cartNotification);
+
+    function showNotification(message) {
+        cartNotification.textContent = message;
+        cartNotification.style.display = "block";
+        cartNotification.style.opacity = "1";
+        cartNotification.style.transform = "translateY(0)";
+
+        setTimeout(() => {
+            cartNotification.style.opacity = "0";
+            cartNotification.style.transform = "translateY(-10px)";
+            setTimeout(() => {
+                cartNotification.style.display = "none";
+            }, 300);
+        }, 1500);
+    }
+
     function updateCartCount() {
         const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
         cartCount.textContent = itemCount;
+
+        // Cart bounce animation
+        cartIcon.classList.add("cart-bounce");
+        setTimeout(() => {
+            cartIcon.classList.remove("cart-bounce");
+        }, 500);
     }
 
     function updateCartDisplay() {
@@ -28,9 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItem.style.padding = "12px";
             cartItem.style.borderBottom = "1px solid #e0e0e0";
 
+            // Ensure the image URL is valid
+            const imageUrl = item.image || "https://via.placeholder.com/50"; // Fallback image if none is provided
             cartItem.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 10px; object-fit: cover;">
+                    <img src="${imageUrl}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 10px; object-fit: cover;">
                     <div class="cart-item-info">
                         <p class="cart-item-name" style="margin: 0; font-weight: 600; font-size: 14px; color: #333;">${item.name}</p>
                         <p class="cart-item-price" style="margin: 0; font-size: 12px; color: #666;">GH₵${item.price}</p>
@@ -53,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Attach event listeners AFTER adding items
         document.querySelectorAll(".increase-quantity").forEach(button => {
             button.addEventListener("click", (e) => {
-                e.stopPropagation(); // Prevents sidebar from closing
+                e.stopPropagation();
                 const idx = e.currentTarget.getAttribute("data-index");
                 cart[idx].quantity++;
                 updateCartDisplay();
@@ -62,12 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll(".decrease-quantity").forEach(button => {
             button.addEventListener("click", (e) => {
-                e.stopPropagation(); // Prevents sidebar from closing
+                e.stopPropagation();
                 const idx = e.currentTarget.getAttribute("data-index");
                 if (cart[idx].quantity > 1) {
                     cart[idx].quantity--;
                 } else {
-                    cart.splice(idx, 1); // Remove item if quantity reaches 0
+                    cart.splice(idx, 1);
                 }
                 updateCartDisplay();
             });
@@ -79,8 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const btn = e.currentTarget;
             const name = btn.getAttribute("data-name");
             const price = parseFloat(btn.getAttribute("data-price"));
-            const productContainer = btn.closest(".product");
-            const image = productContainer ? productContainer.querySelector("img").src : "";
+            const image = btn.getAttribute("data-image") || ""; // Ensure image URL is passed
 
             if (!name || isNaN(price)) return;
 
@@ -92,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             updateCartDisplay();
+            showNotification(`${name} added to cart`);
         });
     });
 
