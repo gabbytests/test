@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
-  <id>https://havo.racour.store/collections/all.atom</id>
-  <link rel="alternate" type="text/html" href="https://havo.racour.store/collections/all"/>
-  <link rel="self" type="application/atom+xml" href="https://havo.racour.store/collections/all.atom"/>
+  <id>https://havo.gabbytests.github.io/test/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://havo.gabbytests.github.io/test/collections/all.atom"/>
   <title>Havo</title>
   <updated>2025-01-15T01:05:04+00:00</updated>
   <author>
     <name>Havo</name>
   </author>
   <entry>
-    <id>https://havo.racour.store/products/7320573051014</id>
+    <id>https://havo.gabbytests.github.io/test/products/7320573051014</id>
     <published>2025-01-15T01:05:04+00:00</published>
     <updated>2025-01-15T01:05:04+00:00</updated>
-    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/goth-dress"/>
+    <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/products/goth-dress"/>
     <title>Goth Dress</title>
     <s:type></s:type>
     <s:vendor>Havo</s:vendor>
@@ -37,7 +37,7 @@
 ]]>
     </summary>
     <s:variant>
-      <id>https://havo.racour.store/products/7320573051014</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320573051014</id>
       <title>Default Title</title>
       <s:price currency="GHS">5.00</s:price>
       <s:sku/>
@@ -45,10 +45,10 @@
     </s:variant>
   </entry>
   <entry>
-    <id>https://havo.racour.store/products/7320401150086</id>
+    <id>https://havo.gabbytests.github.io/test/products/7320401150086</id>
     <published>2025-01-14T16:33:32+00:00</published>
     <updated>2025-01-14T16:33:32+00:00</updated>
-    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/12-carat-diamond-necklace"/>
+    <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/products/12-carat-diamond-necklace"/>
     <title>12-Carat Diamond Necklace</title>
     <s:type>Necklace</s:type>
     <s:vendor>Acme</s:vendor>
@@ -73,7 +73,7 @@
 ]]>
     </summary>
     <s:variant>
-      <id>https://havo.racour.store/products/7320401150086</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320401150086</id>
       <title>Default Title</title>
       <s:price currency="GHS">899.00</s:price>
       <s:sku></s:sku>
@@ -81,10 +81,10 @@
     </s:variant>
   </entry>
   <entry>
-    <id>https://havo.racour.store/products/7320398856326</id>
+    <id>https://havo.gabbytests.github.io/test/products/7320398856326</id>
     <published>2025-01-14T16:21:07+00:00</published>
     <updated>2025-01-14T16:21:07+00:00</updated>
-    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/chic-boots"/>
+    <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/products/chic-boots"/>
     <title>Chic Boots</title>
     <s:type>Shoes</s:type>
     <s:vendor>Acme</s:vendor>
@@ -109,7 +109,7 @@
 ]]>
     </summary>
     <s:variant>
-      <id>https://havo.racour.store/products/7320398856326</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320398856326</id>
       <title>Default Title</title>
       <s:price currency="GHS">299.00</s:price>
       <s:sku></s:sku>
@@ -117,10 +117,10 @@
     </s:variant>
   </entry>
   <entry>
-    <id>https://havo.racour.store/products/7320398200966</id>
+    <id>https://havo.gabbytests.github.io/test/products/7320398200966</id>
     <published>2025-01-14T16:16:36+00:00</published>
     <updated>2025-01-14T16:16:36+00:00</updated>
-    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/grey-hoodie"/>
+    <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/products/grey-hoodie"/>
     <title>Grey Hoodie</title>
     <s:type>Shirts</s:type>
     <s:vendor>Acme</s:vendor>
@@ -145,7 +145,7 @@
 ]]>
     </summary>
     <s:variant>
-      <id>https://havo.racour.store/products/7320398200966</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320398200966</id>
       <title>Default Title</title>
       <s:price currency="GHS">139.00</s:price>
       <s:sku></s:sku>
@@ -153,10 +153,10 @@
     </s:variant>
   </entry>
   <entry>
-    <id>https://havo.racour.store/products/7320357077126</id>
+    <id>https://havo.gabbytests.github.io/test/products/7320357077126</id>
     <published>2025-01-14T15:58:30+00:00</published>
     <updated>2025-01-14T15:58:30+00:00</updated>
-    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/example-pants"/>
+    <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/products/example-pants"/>
     <title>Exotic Bag</title>
     <s:type>Bags</s:type>
     <s:vendor>Acme</s:vendor>
@@ -181,14 +181,14 @@
 ]]>
     </summary>
     <s:variant>
-      <id>https://havo.racour.store/products/7320357077126</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320357077126</id>
       <title>Bag</title>
       <s:price currency="GHS">49.99</s:price>
       <s:sku/>
       <s:grams>1250</s:grams>
     </s:variant>
     <s:variant>
-      <id>https://havo.racour.store/products/7320357077126</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320357077126</id>
       <title>W32H34</title>
       <s:price currency="GHS">49.99</s:price>
       <s:sku/>
@@ -196,10 +196,10 @@
     </s:variant>
   </entry>
   <entry>
-    <id>https://havo.racour.store/products/7320357208198</id>
+    <id>https://havo.gabbytests.github.io/test/products/7320357208198</id>
     <published>2025-01-14T15:57:44+00:00</published>
     <updated>2025-01-14T15:57:44+00:00</updated>
-    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/example-hat"/>
+    <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/products/example-hat"/>
     <title>Stylish Everyday Glasses</title>
     <s:type>Glasses</s:type>
     <s:vendor>Acme</s:vendor>
@@ -224,14 +224,14 @@
 ]]>
     </summary>
     <s:variant>
-      <id>https://havo.racour.store/products/7320357208198</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320357208198</id>
       <title>Grey</title>
       <s:price currency="GHS">17.99</s:price>
       <s:sku/>
       <s:grams>275</s:grams>
     </s:variant>
     <s:variant>
-      <id>https://havo.racour.store/products/7320357208198</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320357208198</id>
       <title>Stylish Everyday Glasses</title>
       <s:price currency="GHS">17.99</s:price>
       <s:sku></s:sku>
@@ -239,10 +239,10 @@
     </s:variant>
   </entry>
   <entry>
-    <id>https://havo.racour.store/products/7320356913286</id>
+    <id>https://havo.gabbytests.github.io/test/products/7320356913286</id>
     <published>2025-01-14T15:38:38+00:00</published>
     <updated>2025-01-14T15:38:38+00:00</updated>
-    <link rel="alternate" type="text/html" href="https://havo.racour.store/products/example-t-shirt"/>
+    <link rel="alternate" type="text/html" href="https://havo.gabbytests.github.io/test/products/example-t-shirt"/>
     <title>Classic Everyday Dress</title>
     <s:type>Shirts</s:type>
     <s:vendor>Acme</s:vendor>
@@ -257,7 +257,7 @@
         <strong>Type: </strong>Shirts<br>
         <strong>Price: </strong>
             19.99 - 25.00
-            <a href="https://havo.racour.store/products/example-t-shirt">(3 variants)</a>
+            <a href="https://havo.gabbytests.github.io/test/products/example-t-shirt">(3 variants)</a>
       </p>
     </td>
   </tr>
@@ -269,21 +269,21 @@
     </summary>
     <s:tag>mens t-shirt example</s:tag>
     <s:variant>
-      <id>https://havo.racour.store/products/7320356913286</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320356913286</id>
       <title>Lithograph - Height: 9&quot; x Width: 12&quot;</title>
       <s:price currency="GHS">25.00</s:price>
       <s:sku/>
       <s:grams>3629</s:grams>
     </s:variant>
     <s:variant>
-      <id>https://havo.racour.store/products/7320356913286</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320356913286</id>
       <title>Small</title>
       <s:price currency="GHS">19.99</s:price>
       <s:sku>example-shirt-s</s:sku>
       <s:grams>200</s:grams>
     </s:variant>
     <s:variant>
-      <id>https://havo.racour.store/products/7320356913286</id>
+      <id>https://havo.gabbytests.github.io/test/products/7320356913286</id>
       <title>Medium</title>
       <s:price currency="GHS">19.99</s:price>
       <s:sku>example-shirt-m</s:sku>
