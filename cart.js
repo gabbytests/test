@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <img src="${imageUrl}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 10px; object-fit: cover;">
                     <div class="cart-item-info">
                         <p class="cart-item-name" style="margin: 0; font-weight: 600; font-size: 14px; color: #333;">${item.name}</p>
-                        <p class="cart-item-price" style="margin: 0; font-size: 12px; color: #666;">GH₵${item.price}</p>
+                        <p class="cart-item-price" style="margin: 0; font-size: 12px; color: #666;">$${item.price}</p>
                     </div>
                 </div>
                 <div class="cart-item-quantity" style="display: flex; align-items: center; gap: 6px; background: #f5f5f5; padding: 4px 10px; border-radius: 10px;">
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItemsContainer.appendChild(cartItem);
         });
 
-        cartTotal.textContent = `Total: GH₵${total.toFixed(2)}`;
+        cartTotal.textContent = `Total: $${total.toFixed(2)}`;
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartCount();
 

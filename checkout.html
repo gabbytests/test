@@ -205,7 +205,7 @@
         <div class="order-container">
           <h2>Order Summary</h2>
           <div id="checkout-items"></div>
-          <p id="checkout-total" class="cart-total">Total: GH₵0.00</p>
+          <p id="checkout-total" class="cart-total">Total: $0.00</p>
         </div>
 
         <!-- Billing (Separated but Below Order Summary) -->
@@ -285,11 +285,11 @@
         itemDiv.classList.add("cart-item");
         itemDiv.innerHTML = `
             <span>${item.name} x${item.quantity}</span>
-            <span>GH₵${(item.price * item.quantity).toFixed(2)}</span>
+            <span>$${(item.price * item.quantity).toFixed(2)}</span>
         `;
         checkoutItems.appendChild(itemDiv);
     });
-    checkoutTotal.textContent = `Total: GH₵${total.toFixed(2)}`;
+    checkoutTotal.textContent = `Total: $${total.toFixed(2)}`;
 
     // Function to show warning inside input boxes
     function showWarning(input, message) {

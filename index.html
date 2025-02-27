@@ -419,8 +419,8 @@
                 this.queryParams[key] = value;
             })
         }
-        this.money_format = "GH₵{{amount}}",
-        this.money_with_currency_format = "GH₵{{amount}}",
+        this.money_format = "${{amount}}",
+        this.money_with_currency_format = "${{amount}}",
         this.currencyCodeEnabled = true,
         
         this.formatMoney=function(t,e){const r=this.currencyCodeEnabled?this.money_with_currency_format:this.money_format;function a(t,e){return void 0===t?e:t}function o(t,e,r,o){if(e=a(e,2),r=a(r,","),o=a(o,"."),isNaN(t)||null==t)return 0;var n=(t=(t/100).toFixed(e)).split(".");return n[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g,"$1"+r)+(n[1]?o+n[1]:"")}"string"==typeof t&&(t=t.replace(".",""));var n="",i=/\{\{\s*(\w+)\s*\}\}/,s=e||r;switch(s.match(i)[1]){case"amount":n=o(t,2);break;case"amount_no_decimals":n=o(t,0);break;case"amount_with_comma_separator":n=o(t,2,".",",");break;case"amount_with_space_separator":n=o(t,2," ",",");break;case"amount_with_period_and_space_separator":n=o(t,2," ",".");break;case"amount_no_decimals_with_comma_separator":n=o(t,0,".",",");break;case"amount_no_decimals_with_space_separator":n=o(t,0," ");break;case"amount_with_apostrophe_separator":n=o(t,2,"'",".")}return s.replace(i,n)},this.resizeImage=function(t,e){try{if(!e||"original"==e||"full"==e||"master"==e)return t;if(-1!==t.indexOf("cdn.shopify.com")||-1!==t.indexOf("/cdn/shop/")){var r=t.match(/\.(jpg|jpeg|gif|png|bmp|bitmap|tiff|tif|webp)((\#[0-9a-z\-]+)?(\?v=.*)?)?$/gim);if(null==r)return null;var a=t.split(r[0]),o=r[0];return a[0]+"_"+e+o}}catch(r){return t}return t},this.getProduct=function(t){if(!t)return!1;let e=("/"===this.routes.root_url?"":this.routes.root_url)+"/products/"+t+".js?shop="+Shopify.shop;return window.ECOM_LIVE&&(e="/shop/builder/ajax/ecom-proxy/products/"+t+"?shop="+Shopify.shop),window.fetch(e,{headers:{"Content-Type":"application/json"}}).then(t=>t.ok?t.json():false)};
@@ -1302,7 +1302,7 @@ Item added to your cart
   >
     <div class="price__container"><div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
           <span class="price-item price-item--regular">
-            GH₵899.00
+            $899.00
           </span></div>
       <div class="price__sale">
           <span class="visually-hidden visually-hidden--inline">Regular price</span>
@@ -1314,7 +1314,7 @@ Item added to your cart
             </s>
           </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
         <span class="price-item price-item--sale price-item--last">
-          GH₵899.00
+          $899.00
         </span>
       </div>
       <small class="unit-price caption hidden">
@@ -1444,7 +1444,7 @@ Item added to your cart
   >
     <div class="price__container"><div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
           <span class="price-item price-item--regular">
-            GH₵299.00
+            $299.00
           </span></div>
       <div class="price__sale">
           <span class="visually-hidden visually-hidden--inline">Regular price</span>
@@ -1456,7 +1456,7 @@ Item added to your cart
             </s>
           </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
         <span class="price-item price-item--sale price-item--last">
-          GH₵299.00
+          $299.00
         </span>
       </div>
       <small class="unit-price caption hidden">
@@ -1600,7 +1600,7 @@ Item added to your cart
   >
   <div class="price__container"><div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
     <span class="price-item price-item--regular">
-      GH₵140.00
+      $140.00
     </span></div>
 <div class="price__sale">
     <span class="visually-hidden visually-hidden--inline">Regular price</span>
@@ -1612,7 +1612,7 @@ Item added to your cart
       </s>
     </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
   <span class="price-item price-item--sale price-item--last">
-    GH₵140.00
+    $140.00
   </span>
 </div>
 <small class="unit-price caption hidden">
@@ -1771,7 +1771,7 @@ Item added to your cart
   >
   <div class="price__container"><div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
     <span class="price-item price-item--regular">
-      GH₵1999.00
+      $1999.00
     </span></div>
 <div class="price__sale">
     <span class="visually-hidden visually-hidden--inline">Regular price</span>
@@ -1783,7 +1783,7 @@ Item added to your cart
       </s>
     </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
   <span class="price-item price-item--sale price-item--last">
-    GH₵1999.00
+    $1999.00
   </span>
 </div>
 <small class="unit-price caption hidden">
@@ -1942,7 +1942,7 @@ Item added to your cart
   >
   <div class="price__container"><div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
     <span class="price-item price-item--regular">
-      GH₵399.00
+      $399.00
     </span></div>
 <div class="price__sale">
     <span class="visually-hidden visually-hidden--inline">Regular price</span>
@@ -1954,7 +1954,7 @@ Item added to your cart
       </s>
     </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
   <span class="price-item price-item--sale price-item--last">
-    GH₵399.00
+    $399.00
   </span>
 </div>
 <small class="unit-price caption hidden">
@@ -2094,7 +2094,7 @@ Item added to your cart
   >
   <div class="price__container"><div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
     <span class="price-item price-item--regular">
-      GH₵199.00
+      $199.00
     </span></div>
 <div class="price__sale">
     <span class="visually-hidden visually-hidden--inline">Regular price</span>
@@ -2106,7 +2106,7 @@ Item added to your cart
       </s>
     </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
   <span class="price-item price-item--sale price-item--last">
-    GH₵199.00
+    $199.00
   </span>
 </div>
 <small class="unit-price caption hidden">
@@ -2603,7 +2603,7 @@ Item added to your cart
     <button id="close-cart">✖</button>
   </div>
   <div id="cart-items"></div>
-  <p id="cart-total">Total: GH₵0.00</p>
+  <p id="cart-total">Total: $0.00</p>
   <button id="checkout-btn">Checkout</button>
 </div>
 
